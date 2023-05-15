@@ -1,8 +1,90 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>My page</title>
+<meta charset="utf-8" />
+<title>윤기의 홈페이지</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	ul li{
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color:white;
+	}
+
+	#menu {
+		
+		font:bold 16px "malgun gothic";
+		width:800px;
+		height:50px;
+		background: rgb(32, 32, 80);
+		color:black;
+		line-height: 50px; 
+		margin:0 auto;
+		text-align: center;
+	}
+
+	#menu > ul > li {
+		float:left;
+		width:160px;
+		position:relative;
+	}
+	#menu > ul > li > ul {
+		width:160px;
+		display:none;
+		position: absolute;
+		font-size:14px;
+		background: skyblue;
+	}
+	#menu > ul > li:hover > ul {
+		display:block;
+		
+	}
+	#menu > ul > li > ul > li:hover {
+		background: rgb(32, 32, 80);
+		transition: ease 1s;
+		}
+	</style>
 </head>
 <body>
-  <p>Hello, World!</p>
+<div id="menu">
+	<ul>
+		<li><a href="#">Main</a>
+		</li>
+		<li><a href="#">Wonkwang</a>
+			<ul>
+				<li><a href="https://www.wku.ac.kr/">원대홈페이지</a></li>
+				<li><a href="https://waffle.wku.ac.kr/lms/login.jsp">와플</a></li>
+				<li><a href="https://intra.wku.ac.kr/SWupis/V005/login.jsp">웹정보서비스</a></li>
+				<li><a href="https://dorm.wku.ac.kr/">학생생활관</a></li>
+			</ul>
+		</li>
+		<li><a href="#">MENU3</a>
+			<ul>
+				<li><a href="#">SUB_MENU</a></li>
+				<li><a href="#">SUB_MENU2</a></li>
+				<li><a href="#">SUB_MENU3</a></li>
+			</ul>
+		</li>
+		<li><a href="#">MENU4</a>
+			<ul>
+				<li><a href="#">SUB_MENU</a></li>
+				<li><a href="#">SUB_MENU2</a></li>
+				<li><a href="#">SUB_MENU3</a></li>
+			</ul>
+		</li>
+		<li><a href="#">MENU5</a>
+			<ul>
+				<li><a href="#">SUB_MENU</a></li>
+				<li><a href="#">SUB_MENU2</a></li>
+				<li><a href="#">SUB_MENU3</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
 </body>
 </html>
