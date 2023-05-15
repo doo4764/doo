@@ -1,90 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
 <title>윤기의 홈페이지</title>
 <style type="text/css">
 	* {
 		margin: 0;
-		padding: 0;
+		padding: 0; 
+		/*전체영역에서 여백 없앰*/
 	}
+
 	ul li{
-		list-style: none;
+		list-style: none; 
+		/*ul li에 리스트 스타일을 없앰*/
 	}
 	a {
 		text-decoration: none;
 		color:white;
+		/*a태그에 텍스트 밑줄을 없애주고 색을 하얀색으로 바꿈*/
 	}
 
 	#menu {
+		font:bold 16px "malgun gothic";	/*글자크기 16px, 글꼴은 맑은고딕*/
+		width:800px;	/*가로로 800px*/
+		height:50px;	/*위아래로 50px*/
+		background: rgb(32, 32, 80);	/*배경색 설정*/
+		color:black;	/*글자색 검적색으로*/
+		line-height: 50px;  /*라인높이는 50px*/
+		margin:0 auto;	/*메뉴박스 가운데정렬*/
+		text-align: center;	/*글자 가운데 정렬*/
 		
-		font:bold 16px "malgun gothic";
-		width:800px;
-		height:50px;
-		background: rgb(32, 32, 80);
-		color:black;
-		line-height: 50px; 
-		margin:0 auto;
-		text-align: center;
 	}
 
+
 	#menu > ul > li {
-		float:left;
-		width:160px;
-		position:relative;
+		float:left;	/*menu태그 자식의 ul의 자식 li를 왼쪽으로 정렬*/
+		width:160px;	/*넓이는 160px*/
+		position:relative; /*자식태그에 positon:absolute 을 부여하기위해 설정*/
 	}
 	#menu > ul > li > ul {
-		width:160px;
-		display:none;
-		position: absolute;
-		font-size:14px;
-		background: skyblue;
+		width:160px; /*넓이를 160px로 설정*/
+		display:none; /*하위메뉴를 숨겨줌*/
+		position:absolute; /*메인메뉴의 위치에 따라 바뀌게된다.*/
+		font-size:14px;	/*글자크기를 14px로*/
+		background: rgb(59, 81, 204); /*배경색설정*/
+		text-align: left; /*글자를 좌로 정렬*/
 	}
 	#menu > ul > li:hover > ul {
-		display:block;
+		display:block;	/*하위메뉴를 블록으로 지정*/
 		
 	}
-	#menu > ul > li > ul > li:hover {
-		background: rgb(32, 32, 80);
-		transition: ease 1s;
+	#menu > ul > li > ul > li:hover /*li에 마우스를 올렸을때*/{
+		background: rgb(32, 32, 80); /*배경색을 이 색으로*/
+		transition: ease 0.25s;	/*배경색이 바뀌는 애니메이션 시간을 0.25초로 설정*/
 		}
 	</style>
 </head>
 <body>
 <div id="menu">
-	<ul>
-		<li><a href="#">Main</a>
+	<ul class="menuclass">
+		<li><a href="https://doo4764.github.io/doo/">Main</a>
 		</li>
-		<li><a href="#">Wonkwang</a>
+		<li><a>Wonkwang</a>
 			<ul>
-				<li><a href="https://www.wku.ac.kr/">원대홈페이지</a></li>
-				<li><a href="https://waffle.wku.ac.kr/lms/login.jsp">와플</a></li>
-				<li><a href="https://intra.wku.ac.kr/SWupis/V005/login.jsp">웹정보서비스</a></li>
-				<li><a href="https://dorm.wku.ac.kr/">학생생활관</a></li>
+				<li><a href="https://www.wku.ac.kr/" target="2">&emsp;원대홈페이지</a></li>
+				<li><a href="https://waffle.wku.ac.kr/lms/login.jsp" target="2">&emsp;와플</a></li>
+				<li><a href="https://intra.wku.ac.kr/SWupis/V005/login.jsp" target="2">&emsp;웹정보서비스</a></li>
+				<li><a href="https://dorm.wku.ac.kr/" target="2">&emsp;학생생활관</a></li>
 			</ul>
 		</li>
-		<li><a href="#">MENU3</a>
+		<li><a>검색엔진</a>
 			<ul>
-				<li><a href="#">SUB_MENU</a></li>
-				<li><a href="#">SUB_MENU2</a></li>
-				<li><a href="#">SUB_MENU3</a></li>
+				<li><a href="https://www.naver.com" target="2">&emsp;네이버</a></li>
+				<li><a href="https://www.google.co.kr" target="2">&emsp;구글</a></li>
 			</ul>
 		</li>
-		<li><a href="#">MENU4</a>
+		<li><a>hd</a>
 			<ul>
-				<li><a href="#">SUB_MENU</a></li>
-				<li><a href="#">SUB_MENU2</a></li>
-				<li><a href="#">SUB_MENU3</a></li>
+				<li><a href="#">&emsp;SUB_MENU</a></li>
+				<li><a href="#">&emsp;SUB_MENU2</a></li>
+				<li><a href="#">&emsp;SUB_MENU3</a></li>
 			</ul>
 		</li>
-		<li><a href="#">MENU5</a>
+		<li><a>Contact</a>
 			<ul>
-				<li><a href="#">SUB_MENU</a></li>
-				<li><a href="#">SUB_MENU2</a></li>
-				<li><a href="#">SUB_MENU3</a></li>
+				<li><a href="mailto:doo4764@gmail.com">&emsp;이메일</a></li>
+				<li><a href="https://open.kakao.com/o/sv9oUxkf" target="2">&emsp;오픈카카오톡</a></li>
+				
 			</ul>
 		</li>
 	</ul>
 </div>
+<p align="middle">
+<iframe src=""  width="100%" height="878px" name="2" frameborder="0" align="middle">
+</iframe>
+</p>
 </body>
 </html>
